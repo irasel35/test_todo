@@ -49,11 +49,27 @@ export default {
   },
   methods : {
     deleteTodo(id){
-this.todos=this.todos.filter(todo=>todo.id !== id)
+      //https delete request
+      axios.delete(`https://jsonplaceholder.typicode.com/todos/${id}
+      `)
+      .then()
+      .catch(err =>console.log(err));
+
+ this.todos=this.todos.filter(todo=>todo.id !== id); 
 
   },
   addTodo(newTodo){
-    this.todos=[...this.todos, newTodo]; 
+   
+   //construct a post request
+   const { title, completed} =newTodo;
+    axios.post('https://jsonplaceholder.typicode.com/todos',{
+      title,
+      completed
+    })
+    .then(res=>this.todos=[...this.todos, res.data])
+    .catch(err =>console.log(err));
+    
+    /* this.todos=[...this.todos, newTodo]; */ 
     //adding new member in array
   }
   },
