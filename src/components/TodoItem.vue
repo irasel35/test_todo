@@ -3,6 +3,7 @@
         <p>
             <input type="checkbox" v-on:change="markComplete" name="" id="">
            {{todo.title}}
+           <button @click="$emit('del-todo',todo.id)" class="del">delete</button>
         </p>
     </div>
 </template>
@@ -12,7 +13,7 @@ export default {
     props:["todo"],
     methods:{
         markComplete(){
-            console.log(123)
+            this.todo.completed = !this.todo.completed;
         }
     }
 }
