@@ -20,19 +20,19 @@ export default {
     todos: [
       {
         id:1,
-        title:"todo One",
-        completed:false
+        title:"Todo One",
+        completed:true
          
       },
        {
         id:2,
-        title:"todo Two",
+        title:"Todo Two",
         completed:true
          
       },
        {
         id:3,
-        title:"todo three",
+        title:"Todo three",
         completed:false
          
       }
