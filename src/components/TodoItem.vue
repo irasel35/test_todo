@@ -25,7 +25,7 @@ export default {
     background: #f4f4f5;
     padding: 10px;
     border-bottom: 1px #CCC dotted;
-    ba
+    text-align:left ;
 }
 .is-complete {
     text-align: center;
