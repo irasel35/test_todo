@@ -22,9 +22,10 @@ export default {
 
 <style scoped>
 .todo-item {
-    background: #f4f4f4;
+    background: #f4f4f5;
     padding: 10px;
     border-bottom: 1px #CCC dotted;
+    ba
 }
 .is-complete {
     text-align: center;
